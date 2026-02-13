@@ -49,7 +49,7 @@ docker-compose down
 docker-compose logs -f
 ```
 
-## Setup Pengembangan
+## Setup Development
 
 ### Backend
 ```bash
@@ -123,7 +123,7 @@ Semua endpoint membutuhkan header `x-user-id`.
 | POST | /api/todos/generate-ai | Generate rekomendasi AI |
 
 
-## Langkah Teknis Yang saya terapkkan dalam project
+## Langkah Teknis Yang saya terapkan dalam project
 
 - Saya menggunakan Gemini Gen AI untuk menghasilkan rekomendasi penyelesaian berdasarkan problem_desc. Pemilihan ini didasarkan pada pengalaman saya sebelumnya dalam mengintegrasikan Gemini API, serta kemudahan setup dan dokumentasi yang cukup jelas untuk kebutuhan prototyping dan mini project seperti ini. Integrasi dilakukan di sisi backend (NestJS) untuk memastikan keamanan API KEY. Frontend tidak langsung berinteraksi dengan layanan AI, melainkan melalui endpoint yang sediakan oleh backend
 - Saya menggunakan NestJs Interceptor untuk menyeragamkan struktur response API. Semua response yang berhasil akan di bungkus dalam format standar menggunakan **ApiResponseDto**, struktur response yang di hasilkan:
